@@ -109,7 +109,7 @@ print(f"Success rate: {success_rate:.3f}")
 ## 📁 Files
 
 - `hangman_public.ipynb` - Main notebook with complete implementation
-- `words_public.txt` - Public English word dataset (370K+ words)
+- `words_public.txt` - Public English word dataset (370K+ words) - Downloaded from https://raw.githubusercontent.com/dwyl/english-words/master/words_alpha.txt
 - `best_model/` - Pre-trained model files
 - Generated model files: `hangman_model_{size}.keras`
 
