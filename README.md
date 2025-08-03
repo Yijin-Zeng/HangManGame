@@ -29,7 +29,7 @@ Guess 'H': (true)  → M A C H I N E → Win
 ```
 
 
-### Example Game (Loss):
+### Example Game (Lose):
 ```
 Secret word: "APPLE"
 Initial:     _ _ _ _ _
@@ -48,9 +48,7 @@ Guess 'S': (false)  → _ P P _ E  (6/6 wrong) -> Lose
 
 This project demonstrates how to build deep learning approaches for playing Hangman game with high successful rate, and discusses potential future improvements. See the notebook for all the details.
 
-## Architecture
-
-### Multi-Stage Strategy
+### Strategy: Multi-Stage Solution
 
 - **Early Stage** (0-1 letters known): Statistical frequency analysis
 - **Mid Stage** (2+ letters, many candidates): Hybrid frequency + bidirectional LSTM  
