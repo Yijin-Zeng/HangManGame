@@ -1,6 +1,6 @@
 # Playing Hangman Game with High Success Rate Using Bidirectional LSTM
 
-We study strategies playing Hangman game with high successful rate (~ 60%) using bidirectional LSTM.
+We study strategies playing Hangman game with high success rate (~ 60%) using bidirectional LSTM.
 
 ## What is Hangman?
 
@@ -67,8 +67,4 @@ This project demonstrates how to build deep learning approaches for playing Hang
 
 ## Contributing
 
-Feel free to fork, experiment, and submit improvements! Areas for contribution:
-- New model architectures
-- Alternative training strategies  
-- Performance optimizations
-- Additional analysis and visualizations
+Feel free to fork, experiment, and submit improvements!
