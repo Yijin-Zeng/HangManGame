@@ -4,45 +4,49 @@ We study strategies playing Hangman game with high successful rate (~ 60%) using
 
 ## What is Hangman?
 
-Hangman is a classic word-guessing game where players try to discover a hidden word by guessing individual letters. Here's how it works:
+Hangman is a classic word-guessing game where players try to discover a hidden word by guessing individual letters:
 
-1. **Setup**: A secret word is chosen and displayed as a series of blank spaces (underscores), one for each letter
+1. **Setup**: A secret word is chosen and displayed as blank spaces (underscores)
 2. **Guessing**: Players guess one letter at a time
-3. **Correct Guess**: If the letter appears in the word, all instances are revealed in their correct positions
-4. **Wrong Guess**: If the letter doesn't appear, it counts as a mistake (traditionally drawn as part of a hanging stick figure)
-5. **Win Condition**: Player wins by revealing the entire word before making too many wrong guesses
+3. **Correct Guess**: If the letter appears in the word, all instances are revealed
+4. **Wrong Guess**: If the letter doesn't appear, it counts as a mistake
+5. **Win Condition**: Player wins by revealing the entire word before making 6 wrong guesses
 6. **Lose Condition**: Player loses after 6 wrong guesses
 
-### Example Game Flow:
+### Example Game (Win):
 ```
-Secret word: "PYTHON"
-Display: _ _ _ _ _ _
+Secret word: "MACHINE"
+Initial:     _ _ _ _ _ _ _
 
-Guess 'E': Not in word (1 wrong)
-Display: _ _ _ _ _ _
+Guess 'E': (true)  → _ _ _ _ _ _ E
+Guess 'A': (true)  → _ A _ _ _ _ E  
+Guess 'T': (false)  → _ A _ _ _ _ E  (1/6 wrong)
+Guess 'I': (true)  → _ A _ _ I _ E
+Guess 'N': (true)  → _ A _ _ I N E
+Guess 'M': (true)  → M A _ _ I N E
+Guess 'C': (true)  → M A C _ I N E
+Guess 'H': (true)  → M A C H I N E → Win
+```
 
-Guess 'T': In word!
-Display: _ _ T _ _ _
 
-Guess 'H': In word!
-Display: _ _ T H _ _
+### Example Game (Loss):
+```
+Secret word: "APPLE"
+Initial:     _ _ _ _ _
 
-Guess 'P': In word!
-Display: P _ T H _ _
-
-Guess 'Y': In word!
-Display: P Y T H _ _
-
-Guess 'O': In word!
-Display: P Y T H O _
-
-Guess 'N': In word! YOU WIN!
-Display: P Y T H O N
+Guess 'E': (true)  → _ _ _ _ E
+Guess 'I': (false)  → _ _ _ _ E  (1/6 wrong)
+Guess 'T': (false)  → _ _ _ _ E  (2/6 wrong)
+Guess 'H': (false)  → _ _ _ _ E  (3/6 wrong)
+Guess 'P': (true)  → _ P P _ E
+Guess 'J': (false)  → _ P P _ E  (4/6 wrong)
+Guess 'C': (false)  → _ P P _ E  (5/6 wrong)
+Guess 'S': (false)  → _ P P _ E  (6/6 wrong) -> Lose
 ```
 
 ## Overview
 
-This project demonstrates how to build deep learning approaches for playing Hangman game with high successful rate, and discusses potential future improvements.
+This project demonstrates how to build deep learning approaches for playing Hangman game with high successful rate, and discusses potential future improvements. See the notebook for all the details.
 
 ## Architecture
 
@@ -55,12 +59,12 @@ This project demonstrates how to build deep learning approaches for playing Hang
 ## Performance
 
 - **Overall Success Rate**: 48-60% (varies by model size)
-- **Training Data**: 300K English words from public sources
-- **Testing Dara**: 1k English words disjoint from training data
+- **Training Data**: ~300K English words from public sources
+- **Testing Dara**: ~ 70k English words disjoint from training data
 
 ## Files
 
-- `hangman_public.ipynb` - Main notebook with complete implementation
+- `hangman_public.ipynb` - Main notebook with complete implementation and discussions
 - `words_public.txt` - Public English word dataset (370K+ words) - Downloaded from https://raw.githubusercontent.com/dwyl/english-words/master/words_alpha.txt
 
 ## Contributing
