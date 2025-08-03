@@ -4,4 +4,5 @@ light_encoded_training_data.jsonl
 .DS_Store
 .Rhistory
 training_data/
-
+Data/
+Models/
