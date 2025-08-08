@@ -6,12 +6,12 @@ We study strategies playing Hangman game with high success rate (~ 60%) using bi
 
 Hangman is a classic word-guessing game where players try to discover a hidden word by guessing individual letters:
 
-1. **Setup**: A secret word is chosen and displayed as blank spaces (underscores)
-2. **Guessing**: Players guess one letter at a time
-3. **Correct Guess**: If the letter appears in the word, all instances are revealed
-4. **Wrong Guess**: If the letter doesn't appear, it counts as a mistake
-5. **Win Condition**: Player wins by revealing the entire word before making 6 wrong guesses
-6. **Lose Condition**: Player loses after 6 wrong guesses
+1. Setup: A secret word is chosen and displayed as blank spaces (underscores)
+2. Guessing: Players guess one letter at a time
+3. Correct Guess: If the letter appears in the word, all instances are revealed
+4. Wrong Guess: If the letter doesn't appear, it counts as a mistake
+5. Win Condition: Player wins by revealing the entire word before making 6 wrong guesses
+6. Lose Condition: Player loses after 6 wrong guesses
 
 ### Example Game (Win):
 ```
@@ -46,7 +46,7 @@ Guess 'S': (false)  → _ P P _ E  (6/6 wrong) -> Lose
 
 ## Overview
 
-This project demonstrates how to build deep learning approaches for playing Hangman game with high successful rate, and discusses potential future improvements. See the notebook for all the details.
+This project demonstrates how to build deep learning approaches for playing Hangman game with high success rate, and discusses potential future improvements. See the notebook for all the details.
 
 ### Strategy: Multi-Stage Solution
 
@@ -59,12 +59,3 @@ This project demonstrates how to build deep learning approaches for playing Hang
 - **Overall Success Rate**: 48-60% (varies by model size)
 - **Training Data**: ~300K English words from public sources
 - **Testing Dara**: ~ 70k English words disjoint from training data
-
-## Files
-
-- `hangman_public.ipynb` - Main notebook with complete implementation and discussions
-- `words_public.txt` - Public English word dataset (370K+ words) - Downloaded from https://raw.githubusercontent.com/dwyl/english-words/master/words_alpha.txt
-
-## Contributing
-
-Feel free to fork, experiment, and submit improvements!
