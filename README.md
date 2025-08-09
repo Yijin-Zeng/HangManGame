@@ -58,4 +58,4 @@ This project demonstrates how to build deep learning approaches for playing Hang
 
 - **Overall Success Rate**: 48-60% (varies by model size)
 - **Training Data**: ~300K English words from public sources
-- **Testing Dara**: ~ 70k English words disjoint from training data
+- **Testing Data**: ~ 70k English words disjoint from training data
